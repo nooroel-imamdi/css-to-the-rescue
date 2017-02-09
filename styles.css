@@ -1,0 +1,226 @@
+/* GENERIC STYLE */
+html, body{
+	margin: 0;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h1,
+h2, 
+h3, 
+h4, 
+h5, 
+h6{
+	font-family: 'Lora', serif;
+	font-weight: 300;
+	color: #111;
+}
+p{
+	font-family: 'Roboto', sans-serif;
+	color: #1E3746;
+}
+button[type="submit"]{
+	display: block;
+	background: #64D7D7;
+    color: #1E3746;
+    font-size: 1em;
+    min-width: 5em;
+    min-height: 3em;
+    margin: 1.5em auto 0;
+    padding: .5em .8em;
+    border: 0;
+}
+@media only screen and (max-width: 40em) {
+	button[type="submit"]{
+		border-radius: 50%;
+		min-width: 4.5em;
+   	 	min-height: 4.5em;
+    	margin: 1em auto 0;
+	}
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	button[type="submit"]{
+		border-radius: 50%;
+		min-width: 4.5em;
+    	min-height: 4.5em;
+	}
+}
+/* /GENERIC STYLE */
+p + footer{
+	font-size: .8em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	padding: .8em 1.2em;
+
+}
+p + footer p{
+	padding: 0;
+}
+/* CHAT */
+#chat,
+#login{
+	background: #1E3746;
+	width: 90%;
+	margin-bottom: 2em;
+}
+#chat ol{
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0;
+	margin-top: 1em;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	#chat ol{
+		padding: 3em 0 2em;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	#chat ol{
+		padding: 3em 0 2em;
+	}
+}
+#chat ol li{
+	background: #fff;
+	font-size: .9em;
+	padding: 2em 2em .5em;
+	width: 70%;
+	margin-top: 1em;
+}    
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+}
+
+#chat ol li > p{
+	background: #F5F5F5;
+	color: #1E3746;
+	padding: 1em;
+	margin: 0;
+	font-weight: 300;
+	border-radius: 2em 2em 0em 2em;
+}
+[data-status="READ"]{
+	color: #B6CA2B;
+}
+[data-status="DELIVERED"]{
+	color: #F6CC02;
+}
+time{
+	text-transform: lowercase;
+}
+#chat form{
+	background: #FFE164;
+    width: 80%;
+    padding: 2em 10%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	#chat form{
+		padding: 2.5em 10%;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	#chat form{
+		width: 60%;
+    	padding: 2em 20%;
+	}
+}
+label[for="field-message"]{
+	margin-bottom: 1em;
+    display: inline-block;
+}
+textarea{
+	display: block;
+    width: 94%;
+    margin: 0 auto;
+    min-height: 1em;
+    border: 1px solid #f5f5f5;
+    border-radius: 2em 2em 0em 2em;
+    color: #1E3746;
+    padding: 1em 3%;
+    font-weight: 300;
+    font-size: .9em;
+    line-height: 1.5;
+    resize: none;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	textarea{
+		min-height: 2em;
+		padding: 2em;
+	}
+}
+/* /CHAT */
+/* LOGIN */
+#login{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4em 0;
+}
+#login form{
+	background: #FFE164;
+	width: 50%;
+	height: 50%;
+	padding: 2em;
+}
+@media only screen and (min-width: 40.063em) {
+	#login form{
+		width: 30%;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	#login form{
+		width: 20%;
+	}
+}	
+#login form input{
+	border: 0;
+	padding: 1em 10%;
+	font-size: .9em;
+}
+[for="field-email"],
+[for="field-password"],
+[name="field-email"],
+[name="field-password"]{
+	display: block;
+	width: 80%;
+}
+[for="field-email"],
+[for="field-password"]{
+	 margin-bottom: .5em;
+	 font-size: .8em;
+}
+[name="field-email"],
+[name="field-password"]{
+	margin-bottom: 1em;
+}
+[for="field-stay-logged-in"]{
+	font-size: .8em;
+}
+[for="field-stay-logged-in"] + a{
+	font-style: italic;
+	color: #414141;
+	font-size: .8em;
+	display: block;
+	margin: .5em 0 2em;
+	text-decoration: none;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	[for="field-stay-logged-in"]{
+		display: inline-block;
+		width: 50%;
+	}
+	[for="field-stay-logged-in"] + a{
+		display: inline-block;
+		width: 50%;
+
+	}
+}
+/* /LOGIN */
