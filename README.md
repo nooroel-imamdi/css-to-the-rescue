@@ -1,4 +1,4 @@
 # Live - Week 1
 
-- http://nooroel.imamovicdesign.com/minor/wk1/css-to-the-rescue/
+- http://nooroel.imamovicdesign.com/minor/css-to-the-rescue/wk1
 
