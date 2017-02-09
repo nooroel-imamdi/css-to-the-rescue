@@ -1,3 +1,4 @@
-# Components
+# Live - Week 1
 
-Rating example makes use of Emoji from: http://emojione.com
+- http://nooroel.imamovicdesign.com/minor/wk1/css-to-the-rescue/
+
