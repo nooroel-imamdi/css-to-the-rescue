@@ -1,0 +1,446 @@
+ GENERIC STYLE */
+html, body{
+	margin: 0;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;
+	color: #414141;
+}
+h1,
+h2, 
+h3, 
+h4, 
+h5, 
+h6{
+	font-family: 'Poppins', sans-serif;
+	color: #1E3746;
+}
+h1{
+	font-weight: 600;
+}
+a{
+	/*color: #64D7D7;*/
+	transition: .5s cubic-bezier(.25,.1,.3,1.5);
+	
+}
+a:visited{
+	color: #64D7D7;
+}
+a:hover{
+	color: #1E3746;
+}
+
+label{
+	color: #866d06;
+}
+p{
+	line-height: 1.5;
+}
+input,
+textarea{
+	border: 1px solid #fff;
+	border-radius: 0em 2em;
+	border-radius: .5em;
+	padding: 1em 1.5em;
+	font-weight: 300;
+    font-size: .9em;
+    color: #868686;
+    transition: .5s cubic-bezier(.25,.1,.3,1.5);
+}
+input:focus,
+textarea:focus{
+	background: #f5f5f5;
+	border: 3px solid #64D7D7;
+	outline: none;
+}
+input[type="checkbox"] { 
+	position: absolute; clip: rect(0,0,0,0); /* disable default checkbox */
+}
+input[type="checkbox"] + label::before {
+	content: '\a0'; /* non-break space */
+	display: inline-block;
+	vertical-align: .2em;
+	width: 1em;
+	height: 1em;
+	margin-right: .3em;
+	border-radius: .3em;
+	background: #fff;
+	text-indent: .15em;
+	line-height: .65;
+	transition: .5s cubic-bezier(.25,.1,.3,1.5);
+
+}
+input[type="checkbox"]:checked + label::before { 
+	content: '\2713';
+	background: #64D7D7;
+}
+button{
+	cursor: pointer;
+	transition: .5s cubic-bezier(.25,.1,.3,1.5);
+}
+button[type="submit"]{
+	display: block;
+	background: #64D7D7;
+    color: #1E3746;
+    font-size: .9em;
+    margin: 1.5em auto 0;
+    padding: .5em .8em;
+    border: 0;
+    border-radius: 50%;
+	min-width: 4.5em;
+   	min-height: 4.5em;
+   	clear: both;
+}
+button[type="submit"]:visited{
+	background: #64D7D7;
+	color: #1E3746;
+}
+button[type="submit"]:hover{
+	background: #06eaea;
+}
+@media only screen and (max-width: 40em) {
+	button[type="submit"]{
+    	margin: 1em auto 0;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	button[type="submit"]{
+		min-width: 5em;
+	    min-height: 3em;
+	    border-radius: .5em;
+	}
+}
+#chat,
+#login,
+#mediaitem,
+#picture-with-subtitle,
+#rating{
+	background: #1E3746;
+	width: 90%;
+	margin-bottom: 2em;
+}
+/* /GENERIC STYLE */
+/* CHAT */
+#chat ol{
+	list-style-type: none;
+	/*display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;*/
+	padding: 1em 0 0;
+	margin-top: 1em;
+}
+#chat li{
+	background: #fff;
+    font-size: .9em;
+    padding: 2em 2em .5em;
+    width: 50%;
+    box-sizing: border-box;
+    border-radius: .5em;
+}  
+#chat li:nth-of-type(2){
+	float: left;
+	margin: 0 0 2em 3em;
+}
+#chat li:nth-of-type(1),
+#chat li:nth-of-type(3){
+	float: right;
+	margin: 0 3em 2em 0;
+}
+#chat p + footer{
+	font-size: .8em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	padding: .8em 1.2em;
+
+}
+#chat p + footer p{
+	padding: 0;
+	color: #a6a6a6;
+}
+@media only screen and (max-width: 40em) {
+	#chat ol{
+		padding: 0;
+	}
+	#chat li{
+		width: 75%;
+	}
+	#chat li:nth-of-type(1),
+	#chat li:nth-of-type(3){
+		margin: 0 1em 2em 0;
+	}
+	#chat li:nth-of-type(2){
+		margin: 0 0 2em 1em;
+	}
+}  
+#chat ol li > p{
+	background: #F5F5F5;
+	color: #1E3746;
+	padding: 1em;
+	margin: 0;
+	font-weight: 300;
+	border-radius: 2em 2em 0em 2em;
+}
+#chat li:nth-of-type(1) > p,
+#chat li:nth-of-type(3) > p{
+	background: #FFE164;
+}
+[data-status="READ"]{
+	color: #B6CA2B !important;
+}
+[data-status="DELIVERED"]{
+	color: #F6CC02 !important;
+}
+time{
+	text-transform: lowercase;
+}
+#chat form{
+	background: #FFE164;
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box;
+    margin: 0 auto;
+    clear: both;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	#chat form{
+		padding: 2.5em 10%;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	#chat form{
+		width: 100%;
+    	padding: 2em 20%;
+    	box-sizing: border-box;
+	}
+}
+label[for="field-message"]{
+	margin-bottom: 1em;
+    display: inline-block;
+}
+textarea{
+	display: block;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 1em;
+    line-height: 1.5;
+    resize: none;
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	textarea{
+		min-height: 2em;
+		padding: 2em;
+	}
+}
+/* /CHAT */
+/* LOGIN */
+#login{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 4em 0;
+}
+#login form{
+	background: #FFE164;
+	width: 60%;
+	height: 50%;
+	padding: 2em;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	#login form{
+		width: 50%;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	#login form{
+		width: 30%;
+	}
+}
+#login form input{
+	box-sizing: border-box;
+	font-size: .9em;
+}
+label[for="field-email"],
+label[for="field-password"],
+input[name="field-email"],
+input[name="field-password"]{
+	display: block;
+	width: 100%;
+}
+label[for="field-email"],
+label[for="field-password"]{
+	margin-bottom: .5em;
+	font-size: .95em;
+	padding: .5em 0 0;
+}
+input[name="field-email"],
+input[name="field-password"]{
+	margin-bottom: 1em;
+}
+input[name="field-email"]:not(:focus) + .instruction:not(hover),
+input[name="field-password"]:not(:focus) + .instruction:not(hover){
+	transform: scale(0);
+	transition: .25s transform;
+}
+.instruction{
+	transition: .5s cubic-bezier(.25,.1,.3,1.5) transform;
+	transform-origin: 1.4em -.4em;
+}
+.instruction {	
+	position: absolute;
+	max-width: 14em;
+	padding: .6em .8em;
+	border-radius: .3em;
+	margin: .3em 0 0 -.2em;
+	background: #fed;
+	border: 1px solid rgba(0,0,0,.3);
+	box-shadow: .05em .2em .6em rgba(0,0,0,.2);
+	font-size: 75%;
+}
+.instruction:before {
+	content: "";
+	position: absolute;
+	top: -.4em;
+	left: 1em;
+	padding: .35em;
+	background: inherit;
+	border: inherit;
+	border-right: 0;
+	border-bottom: 0;
+	transform: rotate(45deg);
+}
+input[name="field-email"]:valid,
+input[name="field-password"]:valid{
+	border: 3px solid #B6CA2B;
+}
+label[for="field-stay-logged-in"]{
+	float: left;
+	font-size: .8em;
+}
+input[name="field-stay-logged-in"]{
+	float: left;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	[for="field-stay-logged-in"]{
+		display: inline-block;
+		width: 50%;
+	}
+	[for="field-stay-logged-in"] + a{
+		display: inline-block;
+		width: 25%;
+	}
+}
+label[for="field-stay-logged-in"] + a{
+	font-style: italic;
+    color: #414141;
+    font-size: .8em;
+    margin: 0 0 2em;
+    text-decoration: none;
+    float: right;
+}
+label[for="field-stay-logged-in"] + a:visited{
+	color: #414141;
+}
+label[for="field-stay-logged-in"] + a:hover{
+	text-decoration: underline;
+}
+/* /LOGIN */
+/* MEDIA-ITEM */
+#mediaitem article{
+	position: relative;
+	background: #fff;
+	width: 60%;
+	margin: 2em auto;
+	padding: 1em 2em;
+	box-sizing: border-box;
+}
+#mediaitem  article img{
+	float: left;
+	margin-right: 1em;
+}
+#mediaitem h1 a{
+	text-decoration: none;
+	margin-top: 0;
+	padding-top: 0;
+}
+#mediaitem h1 a::after{
+	content: '';
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+@media only screen and (max-width: 40em) {
+	article{
+		width: 90% !important;
+	}
+	#mediaitem article img{
+		width: 100% !important;
+		margin: 0 0 1.5em;
+	}
+}
+/* /MEDIA-ITEM */
+/* PICTURE WITH SUBTITLE */
+#picture-with-subtitle{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	/*background: hsl(203, 40%, 20%);
+	background-image: 
+		linear-gradient(90deg, #FFE164 11px, transparent 0),
+		linear-gradient(90deg, #64D7D7 23px, transparent 0);
+		/*linear-gradient(90deg, #655 23px, transparent 0);
+	background-size: 83px 100%, 61px 100%, 90px 100%;*/
+}
+#picture-with-subtitle article{
+	align-self: center;
+	background: #fff;
+	width: 70%;
+	margin: 4em 0;
+	padding: 2em;
+	box-sizing: border-box;
+}
+@media only screen and (max-width: 40em) {
+	#picture-with-subtitle article{
+		padding: 0;
+	}
+}
+#picture-with-subtitle img{
+	width: 100%;
+}
+#picture-with-subtitle figure{
+	padding: 0;
+	margin: 0;
+}
+#picture-with-subtitle figcaption{
+    width: 100%;
+    padding: 1em 2em 2em;
+    margin: 0 auto;
+    background: #FFE164;
+    box-sizing: border-box;
+}
+#picture-with-subtitle figcaption a{
+	color: #414141;
+}
+#picture-with-subtitle footer{
+	font-size: .7em;
+    margin-top: 2em;
+}
+/* /PICTURE WITH SUBTITLE */
+/* RATING */
+#rating fieldset{
+	display: flex;
+	flex-direction: row;
+	border: none;
+}
+/* /RATING */
+
+/* De-emphasize: http://codepen.io/gschier/pen/HCoqh?editors=1100;*/

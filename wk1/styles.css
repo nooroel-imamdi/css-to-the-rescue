@@ -46,8 +46,17 @@ button[type="submit"]:visited{
 button[type="submit"]:hover{
 	background: #74f6f6;
 }
-input:focus{
-	border: 0px solid #54adad;
+@media only screen and (max-width: 40em) {
+	button[type="submit"]{
+    	margin: 1em auto 0;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	button[type="submit"]{
+		min-width: 5em;
+	    min-height: 3em;
+	    border-radius: 0;
+	}
 }
 /* /GENERIC STYLE */
 p + footer{
@@ -76,6 +85,11 @@ p + footer p{
 	align-items: center;
 	padding: 3em 0 2em;
 	margin-top: 1em;
+}
+@media only screen and (max-width: 40em) {
+	#chat ol{
+		padding: 0;
+	}
 }
 #chat ol li{
 	background: #fff;
@@ -107,6 +121,17 @@ time{
     padding: 2em 10%;
     margin: 0 auto;
 }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	#chat form{
+		padding: 2.5em 10%;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	#chat form{
+		width: 60%;
+    	padding: 2em 20%;
+	}
+}
 label[for="field-message"]{
 	margin-bottom: 1em;
     display: inline-block;
@@ -125,6 +150,12 @@ textarea{
     line-height: 1.5;
     resize: none;
 }
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	textarea{
+		min-height: 2em;
+		padding: 2em;
+	}
+}
 /* /CHAT */
 /* LOGIN */
 #login{
@@ -138,7 +169,18 @@ textarea{
 	width: 60%;
 	height: 50%;
 	padding: 2em;
-}	
+}
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+	#login form{
+		width: 50%;
+	}
+}
+@media only screen and (min-width: 64.063em) {
+	#login form{
+		width: 30%;
+	}
+}
+
 #login form input{
 	border: 0;
 	padding: 1em 10%;
@@ -182,21 +224,7 @@ input[name="field-stay-logged-in"]{
 [for="field-stay-logged-in"] + a:hover{
 	text-decoration: underline;
 }
-/* /LOGIN */
-
-@media only screen and (max-width: 40em) {
-	button[type="submit"]{
-    	margin: 1em auto 0;
-	}
-
-	#chat ol{
-		padding: 0;
-	}
-}
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-	#chat form{
-		padding: 2.5em 10%;
-	}
 	[for="field-stay-logged-in"]{
 		display: inline-block;
 		width: 50%;
@@ -205,25 +233,5 @@ input[name="field-stay-logged-in"]{
 		display: inline-block;
 		width: 25%;
 	}
-	textarea{
-		min-height: 2em;
-		padding: 2em;
-	}
-	#login form{
-		width: 50%;
-	}
 }
-@media only screen and (min-width: 64.063em) {
-	button[type="submit"]{
-		min-width: 5em;
-	    min-height: 3em;
-	    border-radius: 0;
-	}
-	#chat form{
-		width: 60%;
-    	padding: 2em 20%;
-	}
-	#login form{
-		width: 30%;
-	}
-}
+/* /LOGIN */
