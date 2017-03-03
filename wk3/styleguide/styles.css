@@ -47,7 +47,7 @@ p{
 	line-height: 1.5;
 }
 input,
-textarea{
+textarea {
 	border: 1px solid #fff;
 	border-radius: 0em 2em;
 	border-radius: .5em;
@@ -58,7 +58,7 @@ textarea{
     transition: .5s cubic-bezier(.25,.1,.3,1.5);
 }
 input:focus,
-textarea:focus{
+textarea:focus {
 	background: #f5f5f5;
 	border: 3px solid #64D7D7;
 	outline: none;
@@ -143,17 +143,11 @@ button[type="submit"]:focus{
 }
 /* /GENERIC STYLE */
 /* CHAT */
-#chat ol,
 #chat-lg ol{
 	list-style-type: none;
-	/*display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;*/
 	padding: 1em 0 0;
 	margin-top: 1em;
 }
-#chat li,
 #chat-lg li{
 	background: #fff;
     font-size: .9em;
@@ -162,20 +156,16 @@ button[type="submit"]:focus{
     box-sizing: border-box;
     border-radius: .5em;
 }
-#chat li:nth-of-type(2),
 #chat-lg li:nth-of-type(2)
 {
 	float: left;
 	margin: 0 0 2em 3em;
 }
-#chat li:nth-of-type(1),
-#chat li:nth-of-type(3),
 #chat-lg li:nth-of-type(1),
 #chat-lg li:nth-of-type(3){
 	float: right;
 	margin: 0 3em 2em 0;
 }
-#chat p + footer,
 #chat-lg p + footer{
 	font-size: .8em;
 	font-family: 'Roboto', sans-serif;
@@ -184,32 +174,25 @@ button[type="submit"]:focus{
 	padding: .8em 1.2em;
 
 }
-#chat p + footer p,
 #chat-lg p + footer p{
 	padding: 0;
 	color: #a6a6a6;
 }
 @media only screen and (max-width: 40em) {
-	#chat ol,
 	#chat-lg ol{
 		padding: 0;
 	}
-	#chat li,
 	#chat-lg li{
 		width: 75%;
 	}
-	#chat li:nth-of-type(1),
-	#chat li:nth-of-type(3),
 	#chat-lg li:nth-of-type(1),
 	#chat-lg li:nth-of-type(3){
 		margin: 0 1em 2em 0;
 	}
-	#chat li:nth-of-type(2),
 	#chat-lg li:nth-of-type(2){
 		margin: 0 0 2em 1em;
 	}
 }  
-#chat ol li > p,
 #chat-lg ol li > p{
 	background: #F5F5F5;
 	color: #1E3746;
@@ -218,8 +201,6 @@ button[type="submit"]:focus{
 	font-weight: 300;
 	border-radius: 2em 2em 0em 2em;
 }
-#chat li:nth-of-type(1) > p,
-#chat li:nth-of-type(3) > p,
 #chat-lg li:nth-of-type(1) > p,
 #chat-lg li:nth-of-type(3) > p{
 	background: #FFE164;
@@ -233,7 +214,6 @@ button[type="submit"]:focus{
 time{
 	text-transform: lowercase;
 }
-#chat form,
 #chat-lg form{
 	background: #FFE164;
     width: 100%;
@@ -243,13 +223,11 @@ time{
     clear: both;
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-	#chat form,
 	#chat-lg form{
 		padding: 2.5em 10%;
 	}
 }
 @media only screen and (min-width: 64.063em) {
-	#chat form,
 	#chat-lg form{
 		width: 100%;
     	padding: 2em 20%;
@@ -283,26 +261,22 @@ textarea{
 	justify-content: center;
 	padding: 4em 0;
 }
-#login form,
 #login-lg form{
 	background: #FFE164;
 	width: 60%;
-	height: 50%;
+	/*height: 50%;*/
 	padding: 2em;
 }
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-	#login form,
 	#login-lg form{
 		width: 50%;
 	}
 }
 @media only screen and (min-width: 64.063em) {
-	#login form,
 	#login-lg form{
 		width: 30%;
 	}
 }
-#login form input,
 #login-lg form input{
 	box-sizing: border-box;
 	font-size: .9em;
@@ -358,7 +332,13 @@ input[name="field-password"]:not(:focus) + .instruction:not(hover){
 }
 input[name="field-email"]:valid,
 input[name="field-password"]:valid{
-	border: 3px solid #B6CA2B;
+	border: 3px solid #6aaf5c;
+	background: #6aaf5c;
+	color: #fff;
+}
+input[name="field-password"]:invalid ~ button[type="submit"]{
+	background: #e2c653;
+	color
 }
 label[for="field-stay-logged-in"]{
 	float: left;
@@ -398,7 +378,6 @@ label[for="field-stay-logged-in"] + a:focus{
 }
 /* /LOGIN */
 /* MEDIA-ITEM */
-#mediaitem article,
 #mediaitem-lg article{
 	position: relative;
 	background: #fff;
@@ -407,18 +386,15 @@ label[for="field-stay-logged-in"] + a:focus{
 	padding: 1em 2em;
 	box-sizing: border-box;
 }
-#mediaitem  article img,
 #mediaitem-lg  article img{
 	float: left;
 	margin-right: 1em;
 }
-#mediaitem h1 a,
 #mediaitem-lg h1 a{
 	text-decoration: none;
 	margin-top: 0;
 	padding-top: 0;
 }
-#mediaitem h1 a::after,
 #mediaitem-lg h1 a::after{
 	content: '';
 	position: absolute;
@@ -432,7 +408,6 @@ label[for="field-stay-logged-in"] + a:focus{
 	article{
 		width: 90% !important;
 	}
-	#mediaitem article img,
 	#mediaitem-lg article img{
 		width: 100% !important;
 		margin: 0 0 1.5em;
@@ -467,6 +442,22 @@ label[for="field-stay-logged-in"] + a:focus{
 #picture-with-subtitle-lg img{
 	width: 100%;
 }
+@media only screen and (orientation : landscape){
+	#picture-with-subtitle-lg figure img:nth-of-type(1){
+		display: none;
+	}
+	#picture-with-subtitle-lg figure img:nth-of-type(2){
+		display: block;
+	}
+}
+@media only screen and (orientation : portrait){
+	#picture-with-subtitle-lg figure img:nth-of-type(1){
+		display: block;
+	}
+	#picture-with-subtitle-lg figure img:nth-of-type(2){
+		display: none;
+	}
+}
 #picture-with-subtitle-lg figure{
 	padding: 0;
 	margin: 0;
@@ -494,7 +485,6 @@ label[for="field-stay-logged-in"] + a:focus{
 }
 /* /PICTURE WITH SUBTITLE 
 /* RATING */
-#rating fieldset,
 #rating-lg fieldset{
 	width: 30%;
 	margin: 3em auto;
@@ -503,23 +493,20 @@ label[for="field-stay-logged-in"] + a:focus{
 	padding: 1em;
 }
 @media only screen and (max-width: 40em) {
-	#rating fieldset,
 	#rating-lg fieldset{
 		width: 80%;
 	}
 }
-#rating legend,
 #rating-lg legend{
 	color: #fff;
 	text-align: center;
+	width: 100%;
 }
-#rating label,
 #rating-lg label{
 	position: relative;
 	float: left;
 	width: 25%;
 }
-#rating input,
 #rating-lg input{
 	position: absolute;
 	-moz-appearance:none;
@@ -534,25 +521,22 @@ label[for="field-stay-logged-in"] + a:focus{
     background: #fff;
 	cursor: pointer;
 }
-#rating input:indeterminate + svg,
 #rating-lg input:indeterminate + svg{
 	opacity: .5;
 }
-#rating input:focus,
 #rating-lg input:focus{
 	opacity: 0;
 	outline: 0;
 	border: 0;
 }
-#rating input:focus + svg,
-#rating-lg input:focus + svg{
+#rating-lg input:focus + svg,
+#rating-lg input:checked + svg
+{
 	opacity: 1;
 }
-#rating input:not(:focus) + svg,
 #rating-lg input:not(:focus) + svg{
 	opacity: .5;
 }
-#rating input:hover + svg,
 #rating-lg input:hover + svg{
 	opacity: 1;
 	transition: .5s cubic-bezier(.25,.1,.3,1.5);
@@ -560,7 +544,6 @@ label[for="field-stay-logged-in"] + a:focus{
 
 /* /RATING */
 /* NAVIGATION */
-#navigation nav,
 #navigation-lg nav{
 	background: #FFE164;
 	width: 60%;
@@ -568,20 +551,8 @@ label[for="field-stay-logged-in"] + a:focus{
 	white-space: nowrap;
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
-	-ms-overflow-style: -ms-autohiding-scrollbar
+	-ms-overflow-style: -ms-autohiding-scrollbar;
 }
-#navigation{
-	width: 100%;
-}
-#navigation nav{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-#navigation nav > ul,
 #navigation-lg nav > ul{
 	display: flex;
 	flex-direction: row;
@@ -592,11 +563,6 @@ label[for="field-stay-logged-in"] + a:focus{
 	height: 3em;
 	line-height: 3em;
 }
-#navigation nav > ul{
-	padding: 0;
-	width: 50%;
-}
-#navigation nav ul a,
 #navigation-lg a{
 	position: relative;
 	background: #FFE164;
@@ -606,32 +572,28 @@ label[for="field-stay-logged-in"] + a:focus{
 	padding: 0 2em;
 	cursor: pointer;
 }
-#navigation nav ul a:visited,
 #navigation-lg a:visited{
 	color: #1E3746;
 }
-#navigation nav ul a:hover,
-#navigation nav ul a:focus,
 #navigation-lg a:hover,
 #navigation-lg a:focus{
 	background: #64D7D7;
 }
-#navigation nav ul a:hover + ul,
-#navigation nav ul a.products:focus + ul,
-#navigation nav ul a.products:focus + ul:hover,
+
+#navigation-lg a:hover ul{
+	display: block;
+	z-index: 1;
+}
+#navigation-lg nav ul ul{
+	display: none;
+}
 #navigation-lg a:hover + ul,
-#navigation-lg a.products:focus + ul,
-#navigation-lg a.products:focus + ul:hover{
+#navigation-lg a:focus + ul{
 	position: absolute;
 	list-style-type: none;
 	padding: 0;
 	display: block;
 }
-#navigation nav ul ul,
-#navigation-lg nav ul ul{
-	display: none;
-}
-#navigation nav ul ul a,
 #navigation-lg nav ul ul a{
 	width: 6em;
 }
